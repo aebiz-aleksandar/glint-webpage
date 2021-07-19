@@ -1,0 +1,25 @@
+  body {
+    font-family: $font-1;
+    font-size: 16px;
+    background-color: $bkg-color;
+    color: $main-color;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    color: #111;
+    font-family: $font-2;
+    font-weight: 600;
+  }
+
+  a, a:hover, a:focus, a:visited {
+    text-decoration: none;
+    outline: none;
+  }
+
+  a {
+    color: $link-color;
+    &:hover {
+      color: $link-hover;
+    }
+  }

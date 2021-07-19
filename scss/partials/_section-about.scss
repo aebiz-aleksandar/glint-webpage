@@ -1,0 +1,127 @@
+  .section-about {
+    position: relative;
+    background-color: $main-color1;
+    padding: 70px 0;
+    overflow: hidden;
+    .scroll-track {
+      position: absolute;
+      top: -90px;
+      right: 40px;
+      width: 2px;
+      height: 160px;
+      background-color: #fff;
+    }
+    .section-caption {
+      text-align: center;
+      margin-bottom: 40px;
+      span {
+        display: block;
+        font-size: 18px;
+        font-family: $font-2;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
+      }
+      h2 {
+        display: inline-block;
+        font-size: 40px;
+        color: #fff;
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid rgba(255,255,255,.25);
+      }
+      p {
+        font-size: 17px;
+        line-height: 1.7;
+        color: #000;
+      }
+    }
+    .section-holder {
+      .section-article {
+        position: relative;
+        text-align: center;
+        padding: 20px 0;
+        h3 {
+          display: inline-block;
+          font-size: 60px;
+          color: #fff;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        h5 {
+          font-weight: bold;
+          color: #000;
+        }
+        &:not(:last-child) {
+          &:after {
+            content: '';
+            width: 250px;
+            height: 1px;
+            background-color: rgba(255, 255, 255, .25);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 576px) {
+    .section-about {
+      .section-holder {
+        .section-article {
+          margin-bottom: 25px;
+          padding: 0 20px;
+          &:not(:last-child) {
+            &:after {
+              content: none;
+            }
+          }
+          &:nth-of-type(2n + 1) {
+            border-right: 1px solid rgba(255, 255, 255, .25);
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .section-about {
+      padding: 80px 0;
+      .section-caption {
+        margin-bottom: 50px;
+        h2 {
+          font-size: 50px;
+        }
+        p {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    .section-about {
+      padding: 90px 0;
+      .section-holder {
+        .section-article {
+          margin-bottom: 0;
+          &:nth-of-type(2n + 1) {
+            border-right: none;
+          }
+          &:not(:last-child) {
+            border-right: 1px solid rgba(255, 255, 255, .25);
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .section-about {
+      padding: 100px 0;
+    }
+  }
